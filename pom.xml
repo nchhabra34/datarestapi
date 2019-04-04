@@ -2,7 +2,6 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>Datarestapi</groupId>
   <artifactId>Datarestapi</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
   <packaging>war</packaging>
   <build>
     <sourceDirectory>src</sourceDirectory>
@@ -21,6 +20,16 @@
         <configuration>
           <source>1.8</source>
           <target>1.8</target>
+        </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.tomcat.maven</groupId>
+        <artifactId>tomcat7-maven-plugin</artifactId>
+        <version>2.2</version>
+        <configuration>
+          <url>http://localhost:9090/mymanager</url>
+		  <port>9090</port>
+          <path>/${project.build.finalName}</path>
         </configuration>
       </plugin>
     </plugins>
@@ -53,4 +62,5 @@
   		<scope>runtime</scope>
   	</dependency>
   </dependencies>
+  <version>1</version>
 </project>

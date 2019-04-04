@@ -44,16 +44,18 @@ public class getRecords {
     	 sd.setCronTime((String) o.get("CronTime"));
     	 sd.setJobName((String) o.get("JobName"));
     	 sd.setTimeDescription((String) o.get("TimeDescription"));
-    	 sd.setServer((String) o.get("Server"));
-    	 System.out.println(sd.getCronTime());
-    	 sd.setJobStatus((String) o.get("JobStatus"));
-    	 sd.setJobStatus((String) o.get("JobStatus"));
-    	sd.setGetCrondescription(ls);
+    	 sd.setServer((String) o.get("server"));
+    	 sd.setJobStatus((String) o.get("JobEnable"));
+    	// sd.setJobStatus((String) o.get("JobStatus"));
+    	 sd.setUrl((String) o.get("url"));
+    	 
+    	 sd.setGetCrondescription(ls);
     	/* JSONObject jsonObj = new JSONObject( sd );
     	 list.add(jsonObj);*/
     	 list.add(sd);
+
+         System.out.println("server="+ sd.getServer());
     	 }
-     System.out.println("VAl="+Arrays.asList(list));
      return Response.ok() //200
  			.entity(list)
  			.header("Access-Control-Allow-Origin", "*")
@@ -83,9 +85,9 @@ public class getRecords {
     	 sd.setCronTime((String) o.get("CronTime"));
     	 sd.setJobName((String) o.get("JobName"));  
     	 sd.setTimeDescription((String) o.get("TimeDescription"));
-    	 sd.setServer((String) o.get("Server"));
-    	 sd.setJobStatus((String) o.get("JobStatus"));
-    	 System.out.println(sd.getJobStatus());
+    	 sd.setServer((String) o.get("server"));
+    	 sd.setJobStatus((String) o.get("JobEnable"));
+    	 System.out.println("server>>"+sd.getJobStatus());
     	 List<String> ls = (List<String>) o.get("CronDescription");
     	 sd.setGetCrondescription(ls);
     	 //System.out.println(sd.getCronTime());
@@ -93,7 +95,6 @@ public class getRecords {
     	 list.add(jsonObj);*/
     	 list.add(sd);
     	 }
-     System.out.println("VAl="+Arrays.asList(list));
      return Response.ok() //200
  			.entity(list)
  			.header("Access-Control-Allow-Origin", "*")

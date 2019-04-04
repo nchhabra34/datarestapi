@@ -13,7 +13,7 @@ public class NightData {
 	public DBCollection mongoConnection(String buildtype)
 	{
 		
-		MongoClient mongoClient = new MongoClient("127.0.0.1" , 27017 );
+		MongoClient mongoClient = new MongoClient("localhost" , 27017 );
 		
 		try
 		{

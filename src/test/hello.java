@@ -4,9 +4,7 @@ package test;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
-import javax.json.JsonArray;
-import javax.json.JsonArrayBuilder;
-import javax.json.JsonObject;
+
 import javax.ws.rs.Consumes;
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;
